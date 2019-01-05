@@ -1,0 +1,18 @@
+﻿@model WebApplication3.Model.EmployeeView
+
+@{
+    ViewBag.Title = "Детали";
+    Layout = "_Layout";
+}
+
+<table class="table table-bordered">
+    <td><a asp-action="Edit" asp-route-id="@Model.Id"><i class="fa fa-edit"></i></a></td>
+    <td>@Model.Age</td>
+    <td>@Model.LastName</td>
+    <td>@Model.Name</td>
+    <td>@Model.SecondName</td>
+    <td>@Model.Salary</td>
+    <td>@Model.Email</td>
+    <a asp-action="Index" asp-route-id="@Model.Id">Назад к спику</a>
+
+</table>

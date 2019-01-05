@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebApplication3.Model.EmployeeView>
+@{
+    ViewData["Title"] = "Список сотрудников";
+}
+
+<hr />
+<table class="table table-bordered">
+    <hr />
+    <a asp-action="Edit" class="btn btn-success">Добавить</a>
+    <hr/>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a></td>
+        <td>@item.LastName</td>
+        <td>@item.Name</td>
+        <td>@item.SecondName</td>
+        <td><a asp-action="Details" asp-route-id="@item.Id">Детали</a></td>
+        <td><a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-cut"></i></a></td>
+    </tr>
+    }
+</table>
+

@@ -1,0 +1,13 @@
+﻿@section top{ 
+    @await Html.PartialAsync("Partial/_Slider")
+}
+@{
+    ViewBag.Title = "Home";
+    Layout = "_LayoutWithSidebar";
+}
+        
+        @await Html.PartialAsync("Partial/_Features_items")
+        
+        @await Html.PartialAsync("Partial/_Category_tab")
+        
+        @await Html.PartialAsync("Partial/_Reccomended_items")
